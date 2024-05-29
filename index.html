@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Reveal Effect</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <style>
+      body {
+        margin: 0;
+        background: #101010;
+        font-family: "Lato";
+      }
+      .rendered {
+        background-image: url('./assets/circuit-board.webp');
+      }
+      .rendered h1 {
+        color:#f0f0f0;
+      }
+      #container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+      }
+      h1 {
+        color: #101010;
+        margin-top: 20rem;
+        font-size: 16rem;
+        user-select: none;
+      }
+      #three-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      
+    </style>
+    <script type="importmap">
+      {
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/"
+        }
+			}
+    </script>
+  </head>
+  <body>
+    <canvas id="three-canvas"></canvas>
+    <div id="container">
+      <h1>ROBOT BOBBY</h1>  
+    </div>  
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
